@@ -1,3 +1,4 @@
+
 .row-content {
     margin: 0px auto;
     padding: 30px;
@@ -8,7 +9,16 @@
 .jumbotron {
     background-color: darkslategrey;
     color: floralwhite;
+    border-radius: 0px !important;
 }
+
+
+
+.navbar-brand {
+    color: white !important;
+}
+
+
 
 .footer {
     margin: 0px;
