@@ -24,7 +24,10 @@
         <div class="container">
 
 
-            <a class="navbar-brand font-weight-bold" href="#">Ristorante Con Fusion</a>
+            <a href="#" class="mr-2">
+                <img src="img/logo.png" width="45" height="50" alt="" class="img-fluid">
+            </a>
+
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
@@ -63,8 +66,13 @@
                 </div>
 
                 <!--LOGO-->
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-12 col-sm-3 align-self-center">
                     <img src="img/logo.png" alt="" class="img-fluid">
+                </div>
+
+                <!--RESERVE BUTTON-->
+                <div class="col-12 col-sm-3 align-self-center mt-1">
+                    <a href="#reserveForm"><button class="btn btn-lg bg-dark text-white">Reserve Table</button></a>
                 </div>
 
             </div>
@@ -80,30 +88,68 @@
 
     <div class="container">
 
-        <div class="media row-content">
-            <img class="d-flex mr-3 img-thumbnail align-self-center"
-                    src="img/uthappizza.png" alt="Uthappizza">
-            <div class="media-body align-self-center">
-                <h2 class="mt-0">Uthappizza</h2>
-                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
-                    Italian pizza, topped with Cerignola olives, ripe vine
-                    cherry tomatoes, Vidalia onion, Guntur chillies and
-                    Buffalo Paneer.</p>
+        <div class="row align-items-center">
+
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                <h2>Our Lipsmacking Culinary Creations</h2>
             </div>
+
+            <div class="col col-sm-first col-md">
+
+                <div class="media row-content">
+
+                    <!--IMAGE-->
+                    <img class="d-flex mr-3 img-thumbnail align-self-center"
+                            src="img/uthappizza.png" alt="Uthappizza">
+                    
+                    <!--MEDIA BODY-->
+                    <div class="media-body align-self-center">
+
+                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
+
+                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                            Italian pizza, topped with Cerignola olives, ripe vine
+                            cherry tomatoes, Vidalia onion, Guntur chillies and
+                            Buffalo Paneer.</p>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+            
         </div>
 
+        <div class="row align-items-center">
 
-        <div class="media row-content">
-            <img class="d-flex mr-3 img-thumbnail align-self-center"
-                    src="img/buffet.png" alt="buffet">
-            <div class="media-body align-self-center">
-                <h2>Weekend Grand Buffet</h2>
-                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+            <div class="col-12 col-sm-4 col-md-3 pl-5">
+                <h2>This Months Promotion</h2>
             </div>
+
+            <div class="col col-sm-first col-md">
+
+                <div class="media row-content">
+                    <img class="d-flex ml-3 img-thumbnail align-self-center order-sm-last"
+                            src="img/buffet.png" alt="buffet">
+                    <div class="media-body align-self-center">
+                        <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    </div>
+                </div>
+
+            </div>
+            
         </div>
 
+        <div class="row align-items-center">
 
-         <div class="media row-content">
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                <h2>Meet our Culinary Specialist</h2>
+            </div>
+
+            <div class="col col-sm-first col-md">
+
+                <div class="media row-content">
 
                     <img class="d-flex mr-3 img-thumbnail align-self-center"
                             src="img/alberto.png" alt="Alberto Somayya">
@@ -122,11 +168,109 @@
 
                     </div>
 
+                </div>
+
+            </div>
+            
         </div>
+
 
     </div>
 
     <!-- ROW MAIN CONTENT END -->
+
+
+
+    <!--RESERVE TABLE CARD WITH FORM-->
+
+    <div class="row row-content" id="reserveForm">
+
+        <div class="col-12 col-md-8 offset-md-2">
+
+            <div class="card">
+
+                <!--HEADER-->
+                <h2 class="card-header bg-dark text-white">Reserve A Table</h2>
+
+                <!--CARD BODY (FORM)-->
+
+                <div class="card-body">
+
+                    <form action="input">
+
+                        <!--FORM GROUP FOR GUESTS SELECTOR-->
+                        <div class="form-group row">
+
+                            <label for="numberofguests" class="col-md-2 col-form-label">Number of Guests</label>
+
+                            <!--BOOTSTRAP CUSTOM RADIO BUTTONS FOR NUMBER OF GUESTS-->
+
+                            <div class="col-md-10">
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline1">1</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline2">2</label>
+                                  </div>
+
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline3">3</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline4">4</label>
+                                  </div>
+
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline5" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline5">5</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline6" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline6">6</label>
+                                  </div>
+
+                            </div>
+                            
+
+                        </div>
+
+                        <!--FORM GROUP FOR DATE AND TIME-->
+
+                        <div class="form-group row">
+
+                            <label for="numberofguests" class="col-md-2 col-form-label">Date &amp; Time</label>
+
+                            <div class="col-12 col-md-4">
+                                <input type="date" name="date" placeholder="Date" class="form-control">
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <input type="time" name="time" placeholder="Time" class="form-control">
+                            </div>
+
+                        </div>
+
+                        <!--RESERVE BUTTON-->
+                        <div class="form-group row">
+                            <div class="col-12 offset-md-4">
+                                <button class="btn btn-secondary btn-lg">Reserve</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
     <!-- FOOTER START -->
