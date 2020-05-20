@@ -40,3 +40,13 @@
     left: 0;
     min-height: 300px;
 }
+
+#playPauseCarousel {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+#playPauseCarousel {
+    z-index: 1;
+}
