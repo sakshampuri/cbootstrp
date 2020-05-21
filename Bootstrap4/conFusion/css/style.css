@@ -41,12 +41,9 @@
     min-height: 300px;
 }
 
-#playPauseCarousel {
+#carouselButton {
     position: absolute;
     right: 0px;
     bottom: 0px;
-}
-
-#playPauseCarousel {
-    z-index: 1;
+    z-index: 2;
 }
