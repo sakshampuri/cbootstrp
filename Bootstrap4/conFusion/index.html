@@ -202,6 +202,7 @@
 
                             </div>
 
+                            <!--SMOKING AREA BUTTONS-->
                             <div class="form-group row">
 
                                 <div class="col-md-2">
@@ -209,13 +210,18 @@
                                 </div>
 
                                 <div class="col-12 col-md-10">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-secondary active">
-                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                    <div class="btn-group btn-group-toggle" id="smokingButtons" data-toggle="buttons">
+
+                                        <!--Non Smoking-->
+                                        <label class="btn btn-success active">
+                                        <input type="radio" name="options" id="optionNonSmoking" autocomplete="off" checked> Non-Smoking
                                         </label>
-                                        <label class="btn btn-secondary">
-                                        <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+
+                                        <!--Smoking-->
+                                        <label class="btn btn-danger">
+                                        <input type="radio" name="options" id="optionSmoking" autocomplete="off"> Smoking
                                         </label>
+
                                     </div>
                                 </div>
 
@@ -241,7 +247,7 @@
                             <div class="form-group row">
                                 <div class="col-12 col-md-8 offset-md-4">
                                     <button type="button" class="btn btn-danger btn-lg ml-auto" data-dismiss="modal">Cancel</button>
-                                    <button class="btn btn-secondary btn-lg ml-3">Reserve</button>
+                                    <button class="btn btn-success btn-lg ml-3">Reserve</button>
                                 </div>
                             </div>
 
@@ -522,6 +528,8 @@
         <script>
 
         $(document).ready(function(){
+
+            // carousel functions
             $("#mycarousel").carousel( { interval: 1000 } );
 
             $("#carouselButton").click(function(){
@@ -536,6 +544,40 @@
                     $("#carouselButton").children("span").addClass('fa-pause');
                 }
             });
+
+
+            
+            
+            /**
+                Reserve modal smoking button functions
+            **/
+
+            //Smoking Option
+            $("#optionSmoking").click(
+                function() {
+
+                    if($("#optionSmoking").parent().hasClass("btn-danger")){
+                        $("#optionSmoking").parent().removeClass("btn-danger");
+                        $("#optionSmoking").parent().addClass("btn-success");
+                        $("#optionNonSmoking").parent().removeClass("btn-success");
+                        $("#optionNonSmoking").parent().addClass("btn-danger");
+                    }
+
+                }
+            )
+            //Non Smoking Option
+            $("#optionNonSmoking").click(
+                function() {
+
+                    if($("#optionNonSmoking").parent().hasClass("btn-danger")){
+                        $("#optionNonSmoking").parent().removeClass("btn-danger");
+                        $("#optionNonSmoking").parent().addClass("btn-success");
+                        $("#optionSmoking").parent().removeClass("btn-success");
+                        $("#optionSmoking").parent().addClass("btn-danger");
+                    }
+
+                }
+            )
 
         });
 
