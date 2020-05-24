@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-    // carousel functions
+    /**
+     * Carousel Play Pause Function
+     */
     $("#mycarousel").carousel( { interval: 1000 } );
 
     $("#carouselButton").click(function(){
@@ -17,11 +19,22 @@ $(document).ready(function(){
     });
 
 
-    
-    
     /**
-        Reserve modal smoking button functions
-    **/
+     * Modal Triggers
+     */
+
+    $("#reserveModalTrigger").click(function(){
+        $("#reserveModal").modal('show');
+    });
+
+    $("#loginModalTrigger").click(function(){
+        $("#loginModal").modal('show');
+    });
+
+
+    /**
+     * Reserve modal smoking button functions
+     */
 
     //Smoking Option
     $("#optionSmoking").click(
@@ -35,7 +48,7 @@ $(document).ready(function(){
             }
 
         }
-    )
+    );
     //Non Smoking Option
     $("#optionNonSmoking").click(
         function() {
@@ -48,6 +61,6 @@ $(document).ready(function(){
             }
 
         }
-    )
+    );
 
 });

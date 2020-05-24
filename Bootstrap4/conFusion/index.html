@@ -28,7 +28,10 @@
                     <img src="img/logo.png" width="45" height="50" alt="" class="img-fluid">
                 </a>
 
+                <!--COLLAPSABLE NAVBAR-->
                 <div class="collapse navbar-collapse">
+
+                    <!--MAIN NAV LINKS-->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="#"><i class="fa fa-home mr-1 fa-lg"></i>Home</a>
@@ -37,12 +40,16 @@
                         <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list mr-1 fa-lg"></i>Menu</a></li>
                         <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card mr-1 fa-lg"></i>Contact</a></li>
                     </ul> 
-                    <span class="navbar-text">
-                        <a href="#loginModal" data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span> Login </a>
+
+                    <!--LOGIN MODAL BUTTON-->
+                    <span class="navbar-text" id="loginModalTrigger">
+                        <a href="#loginModal"><span class="fa fa-sign-in"></span> Login </a>
                     </span>        
+
                 </div>
 
 
+                <!--COLLAPSED BUTTON-->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -61,7 +68,7 @@
                 <div class="modal-content">
 
                     <!--MODAL HEADER-->
-                    <div class="modal-header bg-dark text-white">
+                    <div class="modal-header">
 
                         <h4 class="modal-title">Login </h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -126,8 +133,9 @@
 
                     <!--RESERVE BUTTON-->
                     <div class="col-12 col-sm-3 align-self-center mt-1">
-                        <a href="#reserveModal" class="btn btn-block btn-lg bg-dark text-white" role="button" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                        <a id="reserveModalTrigger" class="btn btn-block btn-lg bg-dark text-white"  role="button">Reserve Table</a>
                     </div>
+
 
                 </div>
 
@@ -148,7 +156,7 @@
                 <div class="modal-content">
 
                     <!--HEADER-->
-                    <div class="modal-header bg-dark text-white">
+                    <div class="modal-header">
                         <h5 class="modal-title">Reserve Table</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -525,7 +533,77 @@
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-        <script src="js/main.js"></script>
+        <!-- <script src="js/main.js"></script> -->
+        <script>
+
+            $(document).ready(function(){
+
+                    /**
+                     * Carousel Play Pause Function
+                     */
+                    $("#mycarousel").carousel( { interval: 1000 } );
+
+                    $("#carouselButton").click(function(){
+                        if($("#carouselButton").children("span").hasClass('fa-pause')) {
+                            $("#mycarousel").carousel('pause');
+                            $("#carouselButton").children("span").removeClass('fa-pause');
+                            $("#carouselButton").children("span").addClass('fa-play');
+                        }
+                        else if($("#carouselButton").children("span").hasClass('fa-play')) {
+                            $("#mycarousel").carousel('cycle');
+                            $("#carouselButton").children("span").removeClass('fa-play');
+                            $("#carouselButton").children("span").addClass('fa-pause');
+                        }
+                    });
+
+
+                    /**
+                     * Modal Triggers
+                     */
+
+                    $("#reserveModalTrigger").click(function(){
+                        $("#reserveModal").modal('show');
+                    });
+
+                    $("#loginModalTrigger").click(function(){
+                        $("#loginModal").modal('show');
+                    });
+
+
+                    /**
+                     * Reserve modal smoking button functions
+                     */
+
+                    //Smoking Option
+                    $("#optionSmoking").click(
+                        function() {
+
+                            if($("#optionSmoking").parent().hasClass("btn-danger")){
+                                $("#optionSmoking").parent().removeClass("btn-danger");
+                                $("#optionSmoking").parent().addClass("btn-success");
+                                $("#optionNonSmoking").parent().removeClass("btn-success");
+                                $("#optionNonSmoking").parent().addClass("btn-danger");
+                            }
+
+                        }
+                    );
+                    //Non Smoking Option
+                    $("#optionNonSmoking").click(
+                        function() {
+
+                            if($("#optionNonSmoking").parent().hasClass("btn-danger")){
+                                $("#optionNonSmoking").parent().removeClass("btn-danger");
+                                $("#optionNonSmoking").parent().addClass("btn-success");
+                                $("#optionSmoking").parent().removeClass("btn-success");
+                                $("#optionSmoking").parent().addClass("btn-danger");
+                            }
+
+                        }
+                    );
+
+                    });
+
+        </script>
 
     </body>
 
