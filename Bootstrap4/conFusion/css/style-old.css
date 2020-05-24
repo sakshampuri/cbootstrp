@@ -1,0 +1,49 @@
+
+.row-content {
+    margin: 0px auto;
+    padding: 30px;
+    min-height: 400px;
+    border-bottom: 1px ridge;
+}
+
+.jumbotron {
+    background-color: darkslategrey;
+    color: floralwhite;
+    border-radius: 0px !important;
+}
+
+
+
+.navbar-brand {
+    color: white !important;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer {
+    margin: 0px;
+    padding-top: 40px;
+    background-color: peachpuff;
+}
+
+.carousel-item {
+  height: 300px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+#carouselButton {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+}
